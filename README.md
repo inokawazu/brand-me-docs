@@ -5,6 +5,8 @@ My place to make my documents.
 **Latex**
 
 - [csvsimple](https://www.ctan.org/pkg/csvsimple)
+- hyperref
+- tabularx
 
 **Programs**
 
