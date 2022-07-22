@@ -7,9 +7,9 @@
 
 \section*{Education}
 
-% \csvautotabular{data/education.csv}
 \csvnames{educations}{degree = \degree,specialization = \specialization,gradyear = \gradyear,entryyear = \entryyear,school = \school,country = \country,city = \city}
 \csvnames{publications}{title=\title,year=\year,arxiv=\arxiv,doi=\doi,journal=\journal}
+\csvnames{appointments}{position=\position,start_year=\startyear,end_year=\endyear,institution=\institution}
 
 
 % degree,specialization,gradyear,entryyear,school,country,city
@@ -26,41 +26,12 @@
   \\\\
 }
 
-% \section*{Notable Publications}
+\section*{Appointments}
 
-% \begin{itemize}
-% {{#:pubs}}
-%     \item {{:title}} - {{:year}}
-% {{/:pubs}}
-% \end{itemize}
-
-% \section*{Education}
-
-% \textbf{PhD Advisor: } {{:advisor}}
-
-% \begin{itemize}
-% {{#:edus}}
-% \item {{:degree}} - {{:date}} - {{:school}}
-% {{/:edus}}
-% \end{itemize}
-
-% \section*{Professional Experiences}
-
-% \begin{itemize}
-% {{#:pexps}}
-% 	\item {{:title}},  {{:start_year}}-{{:end_year}}, {{:organization}}, {{:country}}
-% 		  {{:description}}
-% {{/:pexps}}
-% \end{itemize}
-
-% \section*{Research Experiences}
-
-% \begin{itemize}
-% {{#:rexps}}
-% 	\item {{:title}},  {{:start_year}}-{{:end_year}}, {{:institution}}, {{:country}}
-% {{/:rexps}}
-% \end{itemize}
-
-% \section*{Honors}
+\csvreader[appointments]{data/appointments.csv}{}{
+  \textbf{\position}\ \ \startyear-\endyear\\
+  \institution
+  \\\\
+}
 
 \end{document}
