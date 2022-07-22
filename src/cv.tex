@@ -27,17 +27,9 @@
   \end{tabularx}
 \end{center}
 
-\section*{Education}
-
 \csvnames{educations}{degree = \degree,specialization = \specialization,gradyear = \gradyear,entryyear = \entryyear,school = \school,country = \country,city = \city}
 \csvnames{publications}{title=\title,year=\year,arxiv=\arxiv,doi=\doi,journal=\journal}
 \csvnames{appointments}{position=\position,start_year=\startyear,end_year=\endyear,institution=\institution}
-
-
-% degree,specialization,gradyear,entryyear,school,country,city
-\csvreader[educations]{data/education.csv}{}{
-  \textbf{\degree\ in\ \specialization}\ \entryyear-\gradyear, \school\ -\ \country,\city\\\\
-}
 
 \section*{Publications}
 
@@ -46,6 +38,12 @@
   \textbf{\title}\\
   \href{https://doi.org/\doi}{\doi}\ -\ \href{https://arxiv.org/abs/\arxiv}{arXiv:\arxiv}
   \\\\
+}
+
+\section*{Education}
+
+\csvreader[educations]{data/education.csv}{}{
+  \textbf{\degree\ in\ \specialization}\ \entryyear-\gradyear, \school\ -\ \country,\city\\\\
 }
 
 \section*{Appointments}
