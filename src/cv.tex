@@ -1,6 +1,7 @@
 \documentclass[fontsize=12pt,paper=a4]{article}
 
 \usepackage{csvsimple}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -8,12 +9,22 @@
 
 % \csvautotabular{data/education.csv}
 \csvnames{educations}{degree = \degree,specialization = \specialization,gradyear = \gradyear,entryyear = \entryyear,school = \school,country = \country,city = \city}
+\csvnames{publications}{title=\title,year=\year,arxiv=\arxiv,doi=\doi,journal=\journal}
+
 
 % degree,specialization,gradyear,entryyear,school,country,city
 \csvreader[educations]{data/education.csv}{}{
   \textbf{\degree\ in\ \specialization}\ \entryyear-\gradyear, \school\ -\ \country,\city\\\\
 }
 
+\section*{Publications}
+
+% degree,specialization,gradyear,entryyear,school,country,city
+\csvreader[publications]{data/publications.csv}{}{
+  \textbf{\title}\\
+  \href{https://doi.org/\doi}{\doi}\ -\ \href{https://arxiv.org/abs/\arxiv}{arXiv:\arxiv}
+  \\\\
+}
 
 % \section*{Notable Publications}
 
