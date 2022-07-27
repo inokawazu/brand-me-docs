@@ -40,6 +40,8 @@
 \csvnames{appointments}{position=\position,start_year=\startyear,end_year=\endyear,institution=\institution}
 \csvnames{talks}{type=\type,year=\year,month=\month,place=\place}
 \csvnames{awards}{award=\award,place=\place,year=\year}
+\csvnames{memberships}{organization=\org,start year=\start,end year=\fin,position=\role}
+
 
 \section*{Publications}
 
@@ -91,6 +93,20 @@
     \csvreader[awards]{data/awards.csv}{}{
     \textbf{\award} & \year\\
     \textit{\place} & \\
+    }
+  \end{tabularx}
+\end{center}
+
+\subsection*{Memberships}
+
+\begin{center}
+  \begin{tabularx}{\textwidth} { 
+      >{\raggedright\arraybackslash}X 
+    >{\raggedright\arraybackslash}X  }
+
+    \csvreader[memberships]{data/memberships.csv}{}{
+    \textbf{\role} & \start \ - \ \fin\\
+    \textit{\org} & \\
     }
   \end{tabularx}
 \end{center}
