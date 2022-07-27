@@ -38,6 +38,7 @@
 \csvnames{educations}{degree = \degree,specialization = \specialization,gradyear = \gradyear,entryyear = \entryyear,school = \school,country = \country,city = \city}
 \csvnames{publications}{title=\title,year=\year,arxiv=\arxiv,doi=\doi,journal=\journal}
 \csvnames{appointments}{position=\position,start_year=\startyear,end_year=\endyear,institution=\institution}
+\csvnames{talks}{type=\type,year=\year,month=\month,place=\place}
 
 \section*{Publications}
 
@@ -62,5 +63,21 @@
   \institution
   \\\\
 }
+
+\section*{Miscellaneous}
+
+\subsection*{Given Talks}
+
+\begin{center}
+  \begin{tabularx}{\textwidth} { 
+      >{\raggedright\arraybackslash}X 
+    >{\raggedright\arraybackslash}X  }
+
+    \csvreader[talks]{data/talks.csv}{}{
+    \textbf{\type} & \month,\ \year\\
+    \textit{\place} & \\
+    }
+  \end{tabularx}
+\end{center}
 
 \end{document}
