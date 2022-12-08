@@ -1,0 +1,9 @@
+\csvnames{publications}{title=\title,year=\year,arxiv=\arxiv,doi=\doi,journal=\journal}
+
+% degree,specialization,gradyear,entryyear,school,country,city
+\csvreader[publications]{data/publications.csv}{}{
+  \textit{\year}\ -\ \textbf{\title}\\
+  \ifcsvstrcmp{\doi}{TBD}{}{\href{https://doi.org/\doi}{\doi}\ -\ }
+  \ifcsvstrcmp{\arxiv}{TBD}{}{arXiv:\href{https://arxiv.org/abs/\arxiv}{\arxiv}}
+  \\\\
+}
