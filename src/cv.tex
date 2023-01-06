@@ -37,15 +37,15 @@
   \end{tabularx}
 \end{center}
 
-\csvnames{educations}{degree = \degree,specialization = \specialization,gradyear = \gradyear,entryyear = \entryyear,school = \school,country = \country,city = \city}
 \csvnames{publications}{title=\title,year=\year,arxiv=\arxiv,doi=\doi,journal=\journal}
+\csvnames{educations}{degree = \degree,specialization = \specialization,gradyear = \gradyear,entryyear = \entryyear,school = \school,country = \country,city = \city}
 \csvnames{appointments}{position=\position,start_year=\startyear,end_year=\endyear,institution=\institution}
 \csvnames{talks}{type=\type,year=\year,month=\month,place=\place}
 \csvnames{awards}{award=\award,place=\place,year=\year}
 \csvnames{memberships}{organization=\org,start year=\start,end year=\fin,position=\role}
 
 
-\section*{Publications}
+\section*{Publications (Including Preprints)}
 
 % degree,specialization,gradyear,entryyear,school,country,city
 \csvreader[publications]{data/publications.csv}{}{
@@ -61,7 +61,7 @@
   \textbf{\degree\ in\ \specialization}\ \entryyear-\gradyear, \school\ -\ \country,\city\\\\
 }
 
-\section*{Appointments}
+\section*{Appointments/Employments}
 
 \csvreader[appointments]{data/appointments.csv}{}{
   \textbf{\position}\ \ \startyear-\endyear\\
