@@ -44,17 +44,6 @@
 \csvnames{awards}{award=\award,place=\place,year=\year}
 \csvnames{memberships}{organization=\org,start year=\start,end year=\fin,position=\role}
 
-
-\section*{Publications (Including Preprints)}
-
-% degree,specialization,gradyear,entryyear,school,country,city
-\csvreader[publications]{data/publications.csv}{}{
-  \textit{\year}\ -\ \textbf{\title}\\
-  \ifcsvstrcmp{\doi}{TBD}{}{\href{https://doi.org/\doi}{\doi}\ -\ }
-  \ifcsvstrcmp{\arxiv}{TBD}{}{arXiv:\href{https://arxiv.org/abs/\arxiv}{\arxiv}}
-  \\\\
-}
-
 \section*{Education}
 
 \csvreader[educations]{data/education.csv}{}{
