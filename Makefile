@@ -9,9 +9,6 @@ cv.pdf: $(SOURCEDIR)/cv.tex $(wildcard $(DATADIR)/*)
 publications.pdf: $(SOURCEDIR)/publications.tex $(wildcard $(DATADIR)/*)
 	@$(TEX) $<
 
-publications.pdf: $(SOURCEDIR)/research_statement.tex $(wildcard $(DATADIR)/*)
-	@$(TEX) $<
-
 research_statement.pdf: $(SOURCEDIR)/research_statement.tex $(wildcard $(DATADIR)/*)
 	@$(TEX) $<
 
