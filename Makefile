@@ -9,7 +9,10 @@ cv.pdf: $(SOURCEDIR)/cv.tex $(wildcard $(DATADIR)/*)
 publications.pdf: $(SOURCEDIR)/publications.tex $(wildcard $(DATADIR)/*)
 	@$(TEX) $<
 
-all: cv.pdf publications.pdf src/cover.tex
+all: cv.pdf publications.pdf cover.pdf
+
+cover.pdf: $(SOURCEDIR)/cover.tex $(wildcard $(DATADIR)/*)
+	@$(TEX) $<
 
 clean:
 	rm $(BUILDDIR)/*
