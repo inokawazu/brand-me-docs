@@ -1,7 +1,7 @@
 SOURCEDIR=src
 BUILDDIR=build
 DATADIR=data
-TEX=pdflatex --output-directory=$(BUILDDIR) -interaction nonstopmode
+TEX=lualatex --output-directory=$(BUILDDIR) -interaction nonstopmode
 
 cv.pdf: $(SOURCEDIR)/cv.tex $(wildcard $(DATADIR)/*)
 	@$(TEX) $<

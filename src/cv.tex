@@ -1,4 +1,4 @@
-\documentclass[fontsize=12pt]{article}
+\documentclass[fontsize=12pt]{ltjarticle}
 
 % TODO: add stats <27-07-22, Markus A> %
 % TODO: add misc info about me <27-07-22, Markus A> %
@@ -29,11 +29,13 @@
   \begin{tabularx}{\textwidth} { 
       >{\raggedright\arraybackslash}X 
     >{\raggedleft\arraybackslash}X  }
-    \huge Markus A.G. Amano & CV\\
+    \large アマノ, マーカスアントニオガビソ & 履歴書\\
+    \large Amano, Markus Antonio Garbiso & \\
+    \large 日付: \today & \\
     \hline
-    Website: \href{https://markuspad.com/}{markuspad.com}& 
-    GitHub: \href{https://github.com/inokawazu}{inokawazu}\\
-    Email: markus.a.amano[at]gmail.com & \href{https://inspirehep.net/authors/1778034}{iNSPIREHEP}\\
+    サイト: \href{https://markuspad.com/}{markuspad.com}& 
+    GitHub (開発活): \href{https://github.com/inokawazu}{inokawazu}\\
+    メール: markus.a.amano[at]gmail.com & 研究情報: \href{https://inspirehep.net/authors/1778034}{iNSPIREHEP}\\
   \end{tabularx}
 \end{center}
 
@@ -44,8 +46,19 @@
 \csvnames{awards}{award=\award,place=\place,year=\year}
 \csvnames{memberships}{organization=\org,start year=\start,end year=\fin,position=\role}
 
+\section*{自己PR}
 
-\section*{Publications (Including Preprints)}
+アマノマーカスアントニオと申します。2016年にアメリカのコロラド鉱山大学で工学物理学の学士号を取得し、2021年にアラバマ大学で理論物理学の博士号を取得いたしました。
+現在は中国の河南大学で理学物理の研究員をしております。
+研究職の傍らQDC(クアンタムデータセンター)というクラウドサービスを扱う会社で契約社員として所属しソフトウェア開発に携わっており、フリーランスでもテクニカルコンサルタントとしてデータサイエンスのサービスを提供しています。
+研究職ではこれまで東京大学やお茶の水女子大学、中央大学フランクフルト高等研究所、ヴェルツブリク大学で論文発表をしました。
+
+私は学び成長し続けることができる研究の仕事に情熱を持って取り組んでいます。
+研究職やデータサイエンティストの仕事は生活の様々な側面に応用できよりよい世界を目指すことに関われると思うので、そういった点に働きがいや誇りを感じております。
+コンピュータサイエンスをはじめ、数学物理学に関する様々な分野に興味があり、これまでの経験や自身の能力を活かして新たなことにも挑戦したいです。
+
+
+\section*{出版(プレプリント込)}
 
 % degree,specialization,gradyear,entryyear,school,country,city
 \csvreader[publications]{data/publications.csv}{}{
@@ -55,13 +68,13 @@
   \\\\
 }
 
-\section*{Education}
+\section*{学歴}
 
 \csvreader[educations]{data/education.csv}{}{
   \textbf{\degree\ in\ \specialization}\ \entryyear-\gradyear, \school\ -\ \country,\city\\\\
 }
 
-\section*{Appointments/Employments}
+\section*{職歴}
 
 \csvreader[appointments]{data/appointments.csv}{}{
   \textbf{\position}\ \ \startyear-\endyear\\
@@ -69,9 +82,9 @@
   \\\\
 }
 
-\section*{Miscellaneous}
+\section*{その他}
 
-\subsection*{Given Talks}
+\subsection*{プレゼン}
 
 \begin{center}
   \begin{tabularx}{\textwidth} { 
@@ -85,7 +98,7 @@
   \end{tabularx}
 \end{center}
 
-\subsection*{Awards}
+\subsection*{賞}
 
 \begin{center}
   \begin{tabularx}{\textwidth} { 
@@ -99,7 +112,7 @@
   \end{tabularx}
 \end{center}
 
-\subsection*{Memberships}
+\subsection*{会員であること}
 
 \begin{center}
   \begin{tabularx}{\textwidth} { 
