@@ -1,12 +1,14 @@
 SOURCEDIR=src
 BUILDDIR=build
 DATADIR=data
-TEX=pdflatex --output-directory=$(BUILDDIR) -interaction nonstopmode
+TEX=latexmk --output-directory=$(BUILDDIR)
 
-cv.pdf: $(SOURCEDIR)/cv.tex $(wildcard $(DATADIR)/*)
+DATA=$(wildcard $(DATADIR)/*)
+
+cv.pdf: $(SOURCEDIR)/cv.tex $(DATA)
 	@$(TEX) $<
 
-publications.pdf: $(SOURCEDIR)/publications.tex $(wildcard $(DATADIR)/*)
+publications.pdf: $(SOURCEDIR)/publications.tex $(DATA)
 	@$(TEX) $<
 
 all: cv.pdf publications.pdf
