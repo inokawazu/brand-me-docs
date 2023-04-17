@@ -3,7 +3,7 @@
 SOURCEDIR=src
 BUILDDIR=build
 DATADIR=data
-TEX=latexmk --output-directory=$(BUILDDIR)
+TEX=latexmk -pdf --output-directory=$(BUILDDIR)
 
 DATA=$(wildcard $(DATADIR)/*)
 
