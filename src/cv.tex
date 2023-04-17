@@ -58,13 +58,13 @@
 \section*{Education}
 
 \csvreader[educations]{data/education.csv}{}{
-  \textbf{\degree\ in\ \specialization}\ \entryyear-\gradyear, \school\ -\ \country,\city\\\\
+  \textbf{\degree\ in\ \specialization}\ \entryyear-\gradyear, \school\ -\ \country, \city\\\\
 }
 
 \section*{Appointments/Employments}
 
 \csvreader[appointments]{data/appointments.csv}{}{
-  \textbf{\position}\ \ \startyear-\endyear\\
+  \textbf{\position}\ \ \startyear\ -\ \endyear\\
   \institution
   \\\\
 }
@@ -107,7 +107,7 @@
     >{\raggedright\arraybackslash}X  }
 
     \csvreader[memberships]{data/memberships.csv}{}{
-    \textbf{\role} & \start \ - \ \fin\\
+    \textbf{\role} & \start\ -\ \fin\\
     \textit{\org} & \\
     }
   \end{tabularx}
