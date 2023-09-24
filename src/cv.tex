@@ -40,7 +40,7 @@
 \csvnames{publications}{title=\title,year=\year,arxiv=\arxiv,doi=\doi,journal=\journal}
 \csvnames{educations}{degree = \degree,specialization = \specialization,gradyear = \gradyear,entryyear = \entryyear,school = \school,country = \country,city = \city}
 \csvnames{appointments}{position=\position,start_year=\startyear,end_year=\endyear,institution=\institution}
-\csvnames{recommenders}{name=\name,organization=\organization,position=\position,email=\email}
+\csvnames{recommenders}{name=\name,organization=\organization,position=\position,email=\email, relationship=\relation}
 \csvnames{talks}{type=\type,year=\year,month=\month,place=\place}
 \csvnames{awards}{award=\award,place=\place,year=\year}
 \csvnames{memberships}{organization=\org,start year=\start,end year=\fin,position=\role}
@@ -73,7 +73,7 @@
 \section*{References}
 
 \csvreader[recommenders]{data/recommenders.csv}{}{
-  \textbf{\name}\ (\organization,\ \position)\ \\\email\\
+  \textbf{\name}\ (\organization,\ \position)\textit{ was my \relation}\ \ \\\email\\
 }
 
 \section*{Miscellaneous}
