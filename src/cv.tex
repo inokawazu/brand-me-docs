@@ -40,6 +40,7 @@
 \csvnames{publications}{title=\title,year=\year,arxiv=\arxiv,doi=\doi,journal=\journal}
 \csvnames{educations}{degree = \degree,specialization = \specialization,gradyear = \gradyear,entryyear = \entryyear,school = \school,country = \country,city = \city}
 \csvnames{appointments}{position=\position,start_year=\startyear,end_year=\endyear,institution=\institution}
+\csvnames{recommenders}{name=\name,organization=\organization,position=\position,email=\email}
 \csvnames{talks}{type=\type,year=\year,month=\month,place=\place}
 \csvnames{awards}{award=\award,place=\place,year=\year}
 \csvnames{memberships}{organization=\org,start year=\start,end year=\fin,position=\role}
@@ -52,13 +53,13 @@
   \textit{\year}\ -\ \textbf{\title}\\
   \ifcsvstrcmp{\doi}{TBD}{}{\href{https://doi.org/\doi}{\doi}\ -\ }
   \ifcsvstrcmp{\arxiv}{TBD}{}{arXiv:\href{https://arxiv.org/abs/\arxiv}{\arxiv}}
-  \\\\
+  \\
 }
 
 \section*{Education}
 
 \csvreader[educations]{data/education.csv}{}{
-  \textbf{\degree\ in\ \specialization}\ \entryyear-\gradyear, \school\ -\ \country, \city\\\\
+  \textbf{\degree\ in\ \specialization}\ \entryyear-\gradyear, \school\ -\ \country, \city\\
 }
 
 \section*{Appointments/Employments}
@@ -66,7 +67,13 @@
 \csvreader[appointments]{data/appointments.csv}{}{
   \textbf{\position}\ \ \startyear\ -\ \endyear\\
   \institution
-  \\\\
+  \\
+}
+
+\section*{References}
+
+\csvreader[recommenders]{data/recommenders.csv}{}{
+  \textbf{\name}\ (\organization\ \position)\ \\\email\\
 }
 
 \section*{Miscellaneous}
