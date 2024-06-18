@@ -8,7 +8,7 @@ TEX=latexmk -pdf --output-directory=$(BUILDDIR)
 DATA=$(wildcard $(DATADIR)/*)
 SRC_FILES=$(wildcard $(SOURCEDIR)/*)
 
-all: $(BUILDDIR)/cv.pdf $(BUILDDIR)/publications.pdf $(BUILDDIR)/cv_w_recomenders.pdf
+all: $(BUILDDIR)/cv.pdf $(BUILDDIR)/publications.pdf
 
 clean:
 	rm $(BUILDDIR)/*
