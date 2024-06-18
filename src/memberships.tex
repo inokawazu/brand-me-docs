@@ -1,0 +1,13 @@
+\subsection*{Memberships}
+
+\begin{center}
+  \begin{tabularx}{\textwidth} { 
+      >{\raggedright\arraybackslash}X 
+    >{\raggedright\arraybackslash}X  }
+
+    \csvreader[memberships]{data/memberships.csv}{}{
+    \textbf{\role} & \start\ -\ \fin\\
+    \textit{\org} & \\
+    }
+  \end{tabularx}
+\end{center}
