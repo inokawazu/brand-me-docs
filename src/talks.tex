@@ -1,0 +1,13 @@
+\subsection*{Given Talks}
+
+\begin{center}
+  \begin{tabularx}{\textwidth} { 
+      >{\raggedright\arraybackslash}X 
+    >{\raggedright\arraybackslash}X  }
+
+    \csvreader[talks]{data/talks.csv}{}{
+    \textbf{\type} & \month,\ \year\\
+    \textit{\place} & \\
+    }
+  \end{tabularx}
+\end{center}

@@ -6,14 +6,12 @@ DATADIR=data
 TEX=latexmk -pdf --output-directory=$(BUILDDIR)
 
 DATA=$(wildcard $(DATADIR)/*)
+SRC_FILES=$(wildcard $(SOURCEDIR)/*)
 
 all: $(BUILDDIR)/cv.pdf $(BUILDDIR)/publications.pdf $(BUILDDIR)/cv_w_recomenders.pdf
 
 clean:
 	rm $(BUILDDIR)/*
 
-cv.pdf: $(SOURCEDIR)/cv.tex $(DATA)
-	@$(TEX) $<
-
-$(BUILDDIR)/%.pdf: $(SOURCEDIR)/cv.tex $(DATA)
+$(BUILDDIR)/%.pdf: $(SOURCEDIR)/%.tex $(DATA) $(SRC_FILES)
 	@$(TEX) $<

@@ -1,0 +1,9 @@
+\section*{Publications (Including Preprints)}
+
+\csvreader[publications]{data/publications.csv}{}{
+  \textit{\year}\ -\ \textbf{\title}\\
+  \ifcsvstrcmp{\doi}{TBD}{}{\href{https://doi.org/\doi}{\doi}\ -\ }
+  \ifcsvstrcmp{\arxiv}{TBD}{}{arXiv:\href{https://arxiv.org/abs/\arxiv}{\arxiv}}
+  \\
+}
+
