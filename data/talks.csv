@@ -1,15 +1,17 @@
-year,month,place,type
-2024,November,Online,Solitons at Work (Invited)
-2024,May,Tokyo Institute of Technology,Research Seminar
-2024,May,Keio University,Research Seminar
-2024,May,Chuo University,Research Seminar
-2024,April,Online,Rising Researchers Seminar (Invited)
-2024,March,Online,International Workshop on Noncommutative Integrable Systems
-2023,December,Online,Holotube (Invited)
-2023,September,Online,Online Workshop on Topological Solitons
-2020,February,Tokyo University,Research Seminar
-2020,February,Ochanomizu University,Research Seminar
-2020,February,Chuo University,Research Seminar
-2019,July,Würzburg University,Research Seminar
-2019,July,Würzburg University,Frankfurt Institute for Advanced Studies
-2017,July,Würzburg University,3rd Karl Schwarzschild Conference
+year,month,place,type,invited
+2025,July,Kyoto University,Strings and Fields,no
+2025,July,University of Chinese Academy of Sciences at Beijing,Holographic Applications,yes
+2024,November,Online,Solitons at Work,yes
+2024,May,Tokyo Institute of Technology,Research Seminar,no
+2024,May,Keio University,Research Seminar,no
+2024,May,Chuo University,Research Seminar,no
+2024,April,Online,Rising Researchers Seminar,yes
+2024,March,Online,International Workshop on Noncommutative Integrable Systems,no
+2023,December,Online,Holotube,yes
+2023,September,Online,Online Workshop on Topological Solitons,no
+2020,February,Tokyo University,Research Seminar,no
+2020,February,Ochanomizu University,Research Seminar,no
+2020,February,Chuo University,Research Seminar,no
+2019,July,Würzburg University,Research Seminar,no
+2019,July,Würzburg University,Frankfurt Institute for Advanced Studies,no
+2017,July,Würzburg University,3rd Karl Schwarzschild Conference,no
