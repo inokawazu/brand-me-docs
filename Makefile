@@ -18,4 +18,4 @@ $(BUILDDIR)/%.pdf: $(SOURCEDIR)/%.tex $(DATA_FILES) $(SRC_FILES)
 	@$(TEX) $<
 
 publish: $(BUILDDIR)/cv.pdf $(BUILDDIR)/publications.pdf
-	gh release create "v$(date +%Y%m%d)" --latest=true --generate-notes $(BUILDDIR)/cv.pdf $(BUILDDIR)/publications.pdf
+	gh release create "v$(shell date +%Y%m%d)" --latest=true --generate-notes $(BUILDDIR)/cv.pdf $(BUILDDIR)/publications.pdf
