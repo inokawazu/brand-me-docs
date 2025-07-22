@@ -14,4 +14,5 @@ clean:
 	rm $(BUILDDIR)/*
 
 $(BUILDDIR)/%.pdf: $(SOURCEDIR)/%.tex $(DATA) $(SRC_FILES)
+	mkdir -p $(BUILDDIR)
 	@$(TEX) $<
