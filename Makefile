@@ -5,7 +5,7 @@ BUILDDIR=build
 DATADIR=data
 TEX=latexmk -pdf --output-directory=$(BUILDDIR)
 
-DATA=$(wildcard $(DATADIR)/*)
+DATA_FILES=$(wildcard $(DATADIR)/*)
 SRC_FILES=$(wildcard $(SOURCEDIR)/*)
 
 all: $(BUILDDIR)/cv.pdf $(BUILDDIR)/publications.pdf
@@ -13,6 +13,9 @@ all: $(BUILDDIR)/cv.pdf $(BUILDDIR)/publications.pdf
 clean:
 	rm $(BUILDDIR)/*
 
-$(BUILDDIR)/%.pdf: $(SOURCEDIR)/%.tex $(DATA) $(SRC_FILES)
+$(BUILDDIR)/%.pdf: $(SOURCEDIR)/%.tex $(DATA_FILES) $(SRC_FILES)
 	mkdir -p $(BUILDDIR)
 	@$(TEX) $<
+
+publish: $(BUILDDIR)/cv.pdf $(BUILDDIR)/publications.pdf
+	gh release create "v$(date +%Y%m%d)" --latest=true --generate-notes $(BUILDDIR)/cv.pdf $(BUILDDIR)/publications.pdf
