@@ -1,13 +1,18 @@
 \subsection{Given Talks}
 
 \begin{center}
-  \begin{tabularx}{\textwidth} { 
-      >{\raggedright\arraybackslash}X 
-    >{\raggedright\arraybackslash}X  }
-    
-    \csvreader[talks]{data/talks.csv}{}{
-      \textbf{\type}\ifcsvstrcmp{\invited}{yes}{ (INVITED)} & \month,\ \year\\
-    \textit{\place} & \\
-    }
-  \end{tabularx}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\csvreader[
+  head to column names,
+  late after line=\\
+]{data/talks.csv}{}%
+{%
+  \textbf{\type}%
+  \ifcsvstrcmp{\poster}{yes}{ (POSTER PRESENTATION)}{}%
+  \ifcsvstrcmp{\invited}{yes}{ (INVITED)}{} \newline
+  \textit{\place} &
+  \month, \year
+}
+\end{tabularx}
 \end{center}
+
